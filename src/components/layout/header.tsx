@@ -23,7 +23,11 @@ export function Header() {
             <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2.5">
-                    <span className="text-xl">🌙</span>
+                    <div className="w-7 h-7 bg-gray-900 rounded-full flex items-center justify-center">
+                        <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 22h20L12 2z" />
+                        </svg>
+                    </div>
                     <span className="text-lg font-bold tracking-tight text-gray-900">
                         Jadwal Puasa
                     </span>
