@@ -135,7 +135,7 @@ export function NotificationSettings() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.95 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute right-0 z-50 mt-2 w-72 rounded-xl border border-gray-100 bg-white shadow-lg overflow-hidden"
+                        className="fixed inset-x-4 top-[20%] z-50 w-auto rounded-2xl border border-gray-100 bg-white shadow-2xl overflow-hidden md:absolute md:inset-auto md:right-0 md:top-full md:mt-2 md:w-72 md:rounded-xl md:shadow-lg"
                     >
                         {/* Header */}
                         <div className="p-4 border-b border-gray-50">
