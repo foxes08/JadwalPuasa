@@ -7,7 +7,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 md:px-6 py-12">
             <div className="mb-10">
                 <h1 className="text-2xl font-bold tracking-tight text-gray-900">
-                    Doa & Artikel
+                    Artikel
                 </h1>
                 <p className="text-sm text-gray-400 mt-1">
                     Kumpulan doa harian, niat puasa, dan artikel seputar Ramadhan.

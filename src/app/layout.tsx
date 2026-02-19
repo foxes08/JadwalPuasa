@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
@@ -16,12 +16,15 @@ export const metadata: Metadata = {
     "Jadwal sholat, imsak, dan berbuka puasa Ramadhan 1447 H / 2026 lengkap untuk seluruh kota di Indonesia.",
   keywords: ["jadwal puasa", "imsakiyah", "ramadhan 2026", "jadwal sholat", "buka puasa"],
   manifest: "/manifest.json",
-  themeColor: "#111111",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Jadwal Puasa",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#111111",
 };
 
 export default function RootLayout({

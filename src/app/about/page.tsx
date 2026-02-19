@@ -18,41 +18,53 @@ export default function AboutPage() {
 
             {/* Features */}
             <div className="grid gap-3 md:grid-cols-2">
-                {[
-                    {
-                        icon: Clock,
-                        title: "Akurat & Real-time",
-                        desc: "Jadwal dihitung berdasarkan koordinat GPS dengan metode Kemenag RI.",
-                    },
-                    {
-                        icon: Globe,
-                        title: "20+ Kota Indonesia",
-                        desc: "Mendukung kota-kota besar dari Aceh sampai Makassar.",
-                    },
-                    {
-                        icon: BookOpen,
-                        title: "Doa & Artikel",
-                        desc: "Dilengkapi doa harian, niat puasa, dan artikel Ramadhan.",
-                    },
-                    {
-                        icon: Code2,
-                        title: "Open Source",
-                        desc: "Dibangun dengan Next.js dan data dari Aladhan API.",
-                    },
-                ].map((item) => (
-                    <div
-                        key={item.title}
-                        className="rounded-xl border border-gray-100 bg-white p-5 space-y-3 hover:shadow-sm transition-shadow"
-                    >
-                        <div className="flex items-center gap-3">
-                            <div className="p-2 bg-gray-50 rounded-lg">
-                                <item.icon className="h-4 w-4 text-gray-400" />
-                            </div>
-                            <h3 className="font-bold text-sm text-gray-900">{item.title}</h3>
+                <div className="rounded-xl border border-gray-100 bg-white p-5 space-y-3 hover:shadow-sm transition-shadow">
+                    <div className="flex items-center gap-3">
+                        <div className="p-2 bg-gray-50 rounded-lg">
+                            <Clock className="h-4 w-4 text-gray-400" />
                         </div>
-                        <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                        <h3 className="font-bold text-sm text-gray-900">Akurat & Real-time</h3>
                     </div>
-                ))}
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                        Jadwal dihitung berdasarkan koordinat GPS dengan metode Kemenag RI.
+                    </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-5 space-y-3 hover:shadow-sm transition-shadow">
+                    <div className="flex items-center gap-3">
+                        <div className="p-2 bg-gray-50 rounded-lg">
+                            <Globe className="h-4 w-4 text-gray-400" />
+                        </div>
+                        <h3 className="font-bold text-sm text-gray-900">20+ Kota Indonesia</h3>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                        Mendukung kota-kota besar dari Aceh sampai Makassar.
+                    </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-5 space-y-3 hover:shadow-sm transition-shadow">
+                    <div className="flex items-center gap-3">
+                        <div className="p-2 bg-gray-50 rounded-lg">
+                            <BookOpen className="h-4 w-4 text-gray-400" />
+                        </div>
+                        <h3 className="font-bold text-sm text-gray-900">Doa & Artikel</h3>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                        Dilengkapi doa harian, niat puasa, dan artikel Ramadhan.
+                    </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-5 space-y-3 hover:shadow-sm transition-shadow">
+                    <div className="flex items-center gap-3">
+                        <div className="p-2 bg-gray-50 rounded-lg">
+                            <Code2 className="h-4 w-4 text-gray-400" />
+                        </div>
+                        <h3 className="font-bold text-sm text-gray-900">Open Source</h3>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                        Dibangun dengan Next.js dan data dari Aladhan API.
+                    </p>
+                </div>
             </div>
 
             {/* Purpose */}
@@ -71,13 +83,7 @@ export default function AboutPage() {
                     Temukan kesalahan? Hubungi pengembang.
                 </p>
                 <div className="flex justify-center gap-3">
-                    <Link
-                        href="https://github.com/"
-                        target="_blank"
-                        className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-xl border border-gray-200 text-gray-900 hover:bg-gray-50 transition-colors"
-                    >
-                        GitHub
-                    </Link>
+
                     <Link
                         href="mailto:contact@example.com"
                         className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-xl bg-gray-900 text-white hover:bg-gray-800 transition-colors"

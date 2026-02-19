@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { type ScheduleData } from "@/lib/api";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight } from "lucide-react";
@@ -17,7 +18,14 @@ function cleanTime(t: string) {
 export function MonthlyView({ schedule, preview = false }: MonthlyViewProps) {
     if (!schedule || schedule.length === 0) return null;
 
-    const now = new Date();
+    const [now, setNow] = React.useState(new Date());
+
+    React.useEffect(() => {
+        // Update date every minute
+        const interval = setInterval(() => setNow(new Date()), 60000);
+        return () => clearInterval(interval);
+    }, []);
+
     const todayDay = now.getDate();
     const todayMonth = now.getMonth() + 1;
 
